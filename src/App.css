@@ -1,0 +1,26 @@
+.container{
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+    min-height: 100vh;
+}
+.form{
+  padding: 10px 0;
+}
+.form__input{
+  margin-bottom: 20px;
+}
+.similar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.page{
+    padding-bottom: 20px;
+}
+.page__buttons {
+    margin: 30px 0;
+}
+.page__buttons button{
+    margin-right: 10px;
+}
