@@ -16,7 +16,6 @@ const SimilarPosts = (props) => {
     const postClose = posts.filter(function (item) {
         if( (item.id !== props.post.id && numPost < 3  && (getSimilarPost(item.description,props.post.description) || getSimilarPost(item.title,props.post.title)))){
             numPost++
-            console.log(numPost, item)
             return true;
         }
     })
@@ -25,7 +24,7 @@ const SimilarPosts = (props) => {
            <h2>Similar posts</h2>
             {postClose.length > 0 ?
                 <div className="similar">
-                    {postClose.map(item =><Card title={item.title} bordered={false} style={{ width: 250 }}><p>{moment(item.date).format('DD.MM.YYYY h:mm:ss')}</p></Card>)}
+                    {postClose.map(item =><Card key={item.id} title={item.title} bordered={false} style={{ width: 250 }}><p>{moment(item.date).format('DD.MM.YYYY h:mm:ss')}</p></Card>)}
                 </div>
                 :
                 "Not have Similar"

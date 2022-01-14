@@ -31,7 +31,6 @@ const Page = () => {
     }
     const FormSubmit = (values)=>{
         dispatch(actionUpdatePost(id,values.title,values.desc))
-
         setEdit(false);
     }
     return (
